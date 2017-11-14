@@ -14,3 +14,12 @@ if [[ $a == "y" ]]
   apt install ruby-dev llvm g++ libffi-dev python git
   gem install jekyll
 fi
+unset a
+echo Do you want to setup ssh now ?\(Needed for not entering password everytime\) \(y/n\)
+read a
+if [[ $a == "y" ]]
+ then
+  unset a
+  ./setup_ssh.sh
+fi
+
