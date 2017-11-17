@@ -12,6 +12,8 @@ read a
 if [[ $a == "y" ]]
  then
   apt install ruby-dev llvm g++ libffi-dev python git
+  apt install bash-completion
+  source ~/.bashrc
   gem install jekyll
 fi
 unset a

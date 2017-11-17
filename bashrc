@@ -9,3 +9,8 @@ PS1="[\[\e[36m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[35m\]\h\[\e[m\]]:\[\e[31m\]\`n
 #//then echo 'ssh-agent already running'
 #//else eval "$(ssh-agent -s)"
 #//fi
+alias l='ls'
+alias ll='ls -l'
+alias l1='ls -1'
+alias la='ls -a'
+
