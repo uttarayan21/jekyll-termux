@@ -3,7 +3,9 @@ echo Do you want to replace the bashrc \(recommended\)
 read a
 if [[ $a = "y" ]]
  then
-  mv ~/.bashrc ~/.bashrc.bak
+  if [ -e ~/.bashrc ]; then
+    mv ~/.bashrc ~/.bashrc.bak
+  fi
   cp bashrc ~/.bashrc
 fi
 unset a
@@ -11,7 +13,7 @@ echo Install required packages ? \(about 250mb total in size use if you want to 
 read a
 if [[ $a == "y" ]]
  then
-  apt install ruby-dev llvm g++ libffi-dev python git
+  apt install -y ruby-dev llvm g++ libffi-dev python git bash-completion
   gem install jekyll
 fi
 unset a
