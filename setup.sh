@@ -9,7 +9,7 @@ if [[ $a = "y" ]]
   cp bashrc ~/.bashrc
 fi
 unset a
-echo Install required packages ? \(about 250mb total in size use if you want to view the page locally\)
+echo Install required packages ? \(about 70mb total in size use if you want to view the page locally\)
 read a
 if [[ $a == "y" ]]
  then
