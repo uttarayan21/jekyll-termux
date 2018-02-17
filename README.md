@@ -1,4 +1,4 @@
-#jekyll on termux
+# jekyll on termux
 I just made a simple script to setup 
 jekyll on termux to help my friend 
 maintain his jekyll hosted blog from 
