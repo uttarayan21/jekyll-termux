@@ -11,12 +11,18 @@ echo
 if [[ $a == "y" ]];then
   read -p "Please enter your GitHub.com email address : " email
   if [[ $email == "" ]];then
-    echo "The name of the name of the key can't be blank "
+    echo "The email can't be blank "
+    exit 1
+  fi
+  email_check=$(echo $email | sed -r "s/.*@.*\..*/true/")
+##echo $email_check
+  if [[ $email_check != "true" || $email == $email_check ]];then
+    echo Please enter a valid email
     exit 1
   fi
   read -p "Please enter your GitHub.com username : " username
   if [[ $username == "" ]];then
-    echo "The name of the name of the key can't be blank "
+    echo "The username blank "
     exit 1
   fi
   read -n 1 -p "Do you want to change the name of the file ? (y/n) (Default is $key_name) " a
