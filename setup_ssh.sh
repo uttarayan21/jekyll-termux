@@ -15,7 +15,6 @@ if [[ $a == "y" ]];then
     exit 1
   fi
   email_check=$(echo $email | sed -r "s/.*@.*\..*/true/")
-##echo $email_check
   if [[ $email_check != "true" || $email == $email_check ]];then
     echo Please enter a valid email
     exit 1
@@ -56,6 +55,9 @@ if [[ $a == "y" ]];then
   unset a
   echo Starting ssh-agent
   eval "$(ssh-agent -s)"
+  echo Setting the git global username and email
+  git config --global user.email $email
+  git config --global user.name $username
   echo Adding the ~/.ssh/$key_name to the ssh-agent
   ssh-add ~/.ssh/$key_name
   echo Testing the connection
