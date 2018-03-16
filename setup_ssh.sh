@@ -90,7 +90,7 @@ else
         ;;
     esac
   else
-    echo Trying to start the ssh-agent using a script and a lock file to prevent multiple instances of it
+    echo
     sed -i -e "s/git_rsa/$key_name/g" ~/.termux/boot/ssh-agent
     echo 'source ~/.termux/boot/ssh-agent' >> ~/.bashrc
   fi

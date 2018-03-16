@@ -1,5 +1,5 @@
 echo Jekyll termux installer
-read -n 1 -p "Do you want to replace the bashrc \(recommended\)" a
+read -n 1 -p "Do you want to replace the bashrc (recommended) (y/n)" a
 if [[ $a == "y" ]]
  then
   if [ -e ~/.bashrc ]; then
@@ -9,7 +9,7 @@ if [[ $a == "y" ]]
 fi
 unset a
 
-read -n 1 -p "Install required packages ? (about 70mb total in size use if you want to view the page locally)" a
+read -n 1 -p "Install required packages ? (about 28mb total in size)" a
 if [[ $a == "y" ]]
  then
   apt install -y ruby-dev llvm libffi-dev python git bash-completion termux-api make clang
